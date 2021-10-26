@@ -1,0 +1,44 @@
+from cpf_cnpj import Documento
+from telefonesbr import TelefonesBr
+import re
+
+# #75.681.365/0001-28
+# cpf = Documento.cria_documento("11111111111")
+# print(cpf)
+# # cnpj_teste = Cnpj("75681365000128")
+# #  print(cnpj_teste)
+
+#Expressão Regular Email
+# padrao = "\w{5,50}@\w[a-z]{3,10}.\w{2,3}.\w{2,3}"
+# texto = "aaabbbcc dyogojaa@gmail.com.br"
+# resposta = re.search(padrao, texto)
+#
+# print(resposta.group())
+
+# telefone = "551148243193"
+# tel = TelefonesBr(telefone)
+# print(tel)
+
+# padrao = '([0-9]{2,3})?([0-9]{2})?([0-9]{4,5})([0-9]{4})'
+# resposta = re.findall(padrao, telefone)
+# print(resposta)
+
+# padrao_molde ="(xx)aaaa-wwww"
+# padrao ='[0-9]{2}[0-9]{4,5}[0-9]{4}'
+# texto ="Eu gosto do número 2126451234 e gosto do telefone 1148243193"
+# resposta = re.findall(padrao, texto)
+# print(resposta)
+
+
+from datetime import datetime,timedelta
+from datasbr import DatasBr
+
+
+hoje = DatasBr()
+
+print(hoje.tempo_cadastro())
+
+
+agora = datetime.now()
+agora_formatado = agora.strftime("%Y/%m/%d-%H:%M:%S")
+print(agora_formatado)
